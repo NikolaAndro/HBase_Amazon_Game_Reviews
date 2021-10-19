@@ -3,6 +3,10 @@ Altering and  displaying desired information from HBase that contains Amazon Gam
 
 # TASK
 
+Dataset: https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz
+
+The description of the columns: https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt
+
 #### Part 1:
 
 * Download and Insert this dataset to a HBase table named "GameTable":
