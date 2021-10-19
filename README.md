@@ -37,3 +37,21 @@ The description of the columns: https://s3.amazonaws.com/amazon-reviews-pds/tsv/
 * Find the average 'helpful_vote' in the dataset. 
 
 * Show the 'review_headlines' that got 1 'star_rating'.
+
+
+# HBase_Demo
+
+### Importing Project:
+* Open “eclipse”, right click on “Package Explorer” window, click import.
+* Select “Git”-> “Projects from Git” and click “next”.
+* Select “clone url” and click “next”.
+* Paste “https://github.com/shudipdatta/HBase_Demo.git” in the “url” textbox, Change protocol to “git”, and click “next”. 
+* Choose “Import existing project” and click “finish”.
+
+### Referencing libraries:
+* Right click on project and select “build path”-> “configure build path” ->”libraries”->”add external jars”.
+* Go to the directory “File System/usr/lib/hadoop” and select all jars
+* Go to the directory “File System/usr/lib/hbase” and select all jars
+* Go to the directory “File System/usr/lib/hbase-solr/lib” and select all jars
+* click ok
+
