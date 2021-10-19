@@ -3,7 +3,7 @@ Altering and  displaying desired information from HBase that contains Amazon Gam
 
 # TASK
 
-####Part 1:
+#### Part 1:
 
 * Download and Insert this dataset to a HBase table named "GameTable":
 
@@ -18,7 +18,7 @@ Altering and  displaying desired information from HBase that contains Amazon Gam
 
 * After creating the table and inserting data, run 'describe' command to show that the table has been created perfectly and then run 'scan' & 'limit' command to show 5 rows.
 
-####Part 2:
+#### Part 2:
 
 * Alter 'Review' column family to support 3 versions. Now, take a random row to put additional 2 different 'review_body'. Then show the all 3 'review_body' for this row.
 
@@ -26,7 +26,7 @@ Altering and  displaying desired information from HBase that contains Amazon Gam
 
 * Find the 'review_headlines' that have any characters apart form alphanumerical characters (use regex).
 
-####Part 3:
+#### Part 3:
 
 * Find how many reviews have 'star_rating' equal to 5.
 
