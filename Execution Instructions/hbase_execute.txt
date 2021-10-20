@@ -1,0 +1,22 @@
+//alter versions of Review column family to 3
+alter 'GameTable', {'NAME'=>'Review', 'VERSIONS'=>3}
+
+//Updating row with the key 10000071_R18EAMFGTN58RM for Review to have 3 versions.
+hbase(main):009:0> get 'GameTable', '10000071_R18EAMFGTN58RM',{'COLUMNS'=>'Review:review_body','VERSIONS'=>3}
+
+//Adding 2 more versions on the same row and the same column
+hbase(main):010:0> put 'GameTable', '10000071_R18EAMFGTN58RM', 'Review:review_body','Solid'
+hbase(main):010:0> put 'GameTable', '10000071_R18EAMFGTN58RM', 'Review:review_body','Great Shape'
+
+//displaying the 3 versions of that row and that column(review body)
+hbase(main):012:0> get 'GameTable', '10000071_R18EAMFGTN58RM',{'COLUMNS'=>'Review:review_body','VERSIONS'=>3}
+
+//Filter all the rows that for review_body contain 'awesome' as a substring.
+scan 'GameTable', {'COLUMNS' => 'Review:review_body', 'FILTER' => "ValueFilter(=, 'substring:awesome')"}
+
+//filtering the rows with column review_headline that have any characters apart from alpha numerical characters.
+scan 'GameTable', { 'COLUMNS' => 'Review:review_headline', 'FILTER' => "ValueFilter(=, 'regexstring:[a-zA-z0-9]')"}
+
+
+
+
